@@ -1,0 +1,73 @@
+ion-content {
+  --background: linear-gradient(135deg, #000000, #ff0000 50%, #990000 100%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20vh; /* joga o card mais para baixo */
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#block {
+  width: 320px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: rgba(0, 0, 0, 0.8); /* card preto translúcido */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.5);
+}
+
+#block ion-item {
+  --background: transparent;
+  --color: #ffffff; /* texto branco */
+  margin-bottom: 12px;
+}
+
+#block ion-label {
+  color: #ffffff; /* labels brancos */
+}
+
+#block ion-input {
+  color: #ffffff; /* texto digitado branco */
+}
+
+#block ion-button {
+  margin-top: 15px;
+  --background: #ff0000; /* botão vermelho */
+  --color: #ffffff;      /* texto branco */
+}
+
+#container h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+#container p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 10px 0 0;
+}
+
+#container a {
+  text-decoration: none;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  #block {
+    width: 90%;
+    margin-top: 25vh;
+  }
+}
