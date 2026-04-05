@@ -7,7 +7,7 @@ describe('LoginPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LoginPage], // importa o componente standalone
+      imports: [LoginPage], // importa o componente standalone do LoginPage
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoginPage);
