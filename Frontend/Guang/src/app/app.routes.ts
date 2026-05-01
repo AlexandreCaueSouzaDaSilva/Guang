@@ -21,4 +21,21 @@ export const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full',
   },
+  {
+    path: 'resultado',
+    loadComponent: () => import('./pages/resultado/resultado.page').then( m => m.ResultadoPage)
+  },
+  {
+    path: 'notebooks',
+    loadComponent: () => import('./pages/notebooks/notebooks.page').then( m => m.NotebooksPage)
+  },
+  {
+    path: 'config',
+    loadComponent: () => import('./pages/config/config.page').then( m => m.ConfigPage)
+  },
+  {
+    path: 'config',
+    loadComponent: () => import('./pages/config/config.page').then( m => m.ConfigPage)
+  },
+
 ];

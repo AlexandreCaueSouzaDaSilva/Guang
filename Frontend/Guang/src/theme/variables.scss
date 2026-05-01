@@ -1,2 +1,42 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+:root {
+  --ion-background-color: #FAFAF8;
+  --ion-background-color-rgb: 250, 250, 248;
+  --ion-text-color: #1A1A1A;
+  --ion-text-color-rgb: 26, 26, 26;
+  --ion-card-background: #FFFFFF;
+  --ion-item-background: #FFFFFF;
+  --ion-item-color: #1A1A1A;
+  --ion-toolbar-background: #FFFFFF;
+  --ion-toolbar-color: #1A1A1A;
+  --ion-border-color: #E0E0E0;
+  --color-primary: #E53935;
+  --color-surface: #F5F5F5;
+  --color-border: #E0E0E0;
+  --color-text-secondary: #888888;
+  --color-icon-dark-bg: #E0E0E0;
+  --color-icon-dark-color: #534AB7;
+  --color-icon-notif-bg:  #E0E0E0;
+  --color-icon-notif-color: #534AB7;
+  --ion-font-family: 'DM Sans', sans-serif;
+}
+
+body.dark {
+  --ion-background-color: #1a0a0a;
+  --ion-background-color-rgb: 26, 10, 10;
+  --ion-text-color: #FFFFFF;
+  --ion-text-color-rgb: 255, 255, 255;
+  --ion-card-background: #1E1E1E;
+  --ion-item-background: #1E1E1E;
+  --ion-item-color: #FFFFFF;
+  --ion-toolbar-background: #1a0a0a;
+  --ion-toolbar-color: #FFFFFF;
+  --ion-border-color: #2C2C2C;
+  --color-primary: #E53935;
+  --color-surface: #1E1E1E;
+  --color-border: #2C2C2C;
+  --color-text-secondary: #AAAAAA;
+  --color-icon-dark-bg: #26215C;
+  --color-icon-dark-color:  #EEEDFE;
+  --color-icon-notif-bg: #26215C;
+  --color-icon-notif-color:  #EEEDFE;
+}

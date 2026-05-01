@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+
+  <div class="topbar">
+    <button class="back-btn" routerLink="/home">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <span class="app-title">Notebooks</span>
+    <button class="avatar-btn">
+      <ion-icon name="person-outline"></ion-icon>
+    </button>
+  </div>
+
+  <div class="section-label">Meus Notebooks</div>
+
+    <div class="notebooks-grid">
+      <div class="notebook-card" *ngFor="let notebook of notebooks">
+        <div class="notebook-thumb"></div>
+        <p>{{ notebook.nome }}</p>
+        <span>{{ notebook.total }} transcrições</span>
+      </div>
+
+      <button class="add-card">
+        <ion-icon name="add-outline"></ion-icon>
+        <span>Novo</span>
+      </button>
+   </div>
+
+</ion-content>

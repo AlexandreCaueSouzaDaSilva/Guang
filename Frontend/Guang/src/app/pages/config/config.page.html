@@ -1,0 +1,63 @@
+<ion-content [fullscreen]="true">
+
+  <div class="topbar">
+    <button class="back-btn" routerLink="/home">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <span class="app-title">Configurações</span>
+  </div>
+
+  <div class="profile-card">
+    <div class="avatar">A</div>
+    <div class="profile-info">
+      <p>Marcos</p>
+      <span>marcos@example.com</span>
+    </div>
+    <span class="edit-link">Editar</span>
+  </div>
+
+  <div class="section-label">Preferências</div>
+
+  <div class="settings-card">
+
+    <div class="setting-row">
+      <div class="setting-icon dark">
+        <ion-icon name="moon-outline"></ion-icon>
+      </div>
+      <div class="setting-text">
+        <p>Tema escuro</p>
+        <span>{{ temaEscuro ? 'Ativado' : 'Desativado' }}</span>
+      </div>
+      <button class="toggle" [class.on]="temaEscuro" (click)="toggleTema()"></button>
+    </div>
+
+    <div class="setting-row">
+      <div class="setting-icon notif">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </div>
+      <div class="setting-text">
+        <p>Notificações</p>
+        <span>Transcrição concluídas</span>
+      </div>
+      <button class="toggle" [class.on]="notificacoes" (click)="toggleNotificacoes()"></button>
+    </div>
+
+  </div>
+
+  <div class="danger-section">
+
+    <button class="danger-btn" routerLink="/login">
+      <ion-icon name="log-out-outline"></ion-icon>
+      Deslogar Conta
+    </button> 
+
+    <button class="danger-btn red">
+      <ion-icon name="trash-outline"></ion-icon>
+      Deletar Conta
+    </button>
+
+  </div>
+
+</ion-content>
+
+

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { 
   IonHeader, 
   IonToolbar, 
@@ -16,6 +17,7 @@ import {
   styleUrls: ['./login.page.scss'],
   standalone: true,
   imports: [
+    RouterModule,
     IonHeader,
     IonToolbar,
     IonTitle,

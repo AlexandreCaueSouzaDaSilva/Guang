@@ -1,0 +1,34 @@
+<ion-content [fullscreen]="true">
+
+  <div class="topbar">
+    <button class="back-btn" routerLink="/home">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <span class="app-title">Resultado da Transcrição</span>
+  </div>
+
+  <div class="section-label">Imagem envidada:</div>
+
+  <div class="image-preview">
+    <img src="https://placehold.co/600x300/1a0a0a/E53935?text=Imagem" alt="imagem enviada" />
+  </div>
+
+  <div class="section-label">texto trasncrito:</div>
+
+  <div class="texto-card">
+    <p>{{ textoTranscrito }}</p>
+  </div>
+
+  <div class="actions-row">
+    <button class="action-btn">
+      <ion-icon name="copy-outline"></ion-icon>
+      Copiar Texto
+    </button>
+
+  <button class="action-btn primary">
+    <ion-icon name="save-outline"></ion-icon>
+     Salvar
+    </button>
+  </div>
+
+</ion-content>

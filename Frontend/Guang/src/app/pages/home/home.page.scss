@@ -1,0 +1,199 @@
+ion-content {
+  --background: var(--ion-background-color);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px 8px;
+}
+
+.app-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--ion-text-color);
+}
+
+.avatar-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ion-text-color);
+    font-size: 18px;
+}
+
+.section-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  padding: 0 20px;
+  margin: 16px 0 10px;
+}
+
+.upload-area {
+  margin: 0 20px;  
+  background: var(--color-surface);
+  border: 1.5px dashed var(--color-primary);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.upload-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--ion--card-background);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  font-size: 26px;
+  color: var(--color-primary);
+}
+
+.upload-area p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ion-primary);
+  font-weight: 500;
+}
+
+.upload-area span {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.divider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 20px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.divider-text {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.camera-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  background: var(--color-surface);
+  color: var(--ion-text-color);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.camera-btn ion-icon {
+  font-size: 18px;
+}
+
+.recent-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 20px;
+  margin: 20px 0 10px;
+}
+
+.see-all {
+  font-size: 12px;
+  color: var(--color-primary);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.chips-row {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px;
+  overflow-x: auto;
+}
+
+.chip {
+  flex-shrink: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 8px;
+  width: 90px;
+}
+
+.chip-thumb {
+    width: 100%;
+    height: 44px;
+    background: var(--color-border);
+    border-radius: 8px;
+    margin-bottom: 6px;
+}
+
+.chip p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--ion-text-color);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+.chip span {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+}
+  
+.transcribe-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 20px 0;
+  width: calc(100% - 40px);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.transcribe-btn ion-icon {
+  font-size: 20px;
+}
+
+.transcribe-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
