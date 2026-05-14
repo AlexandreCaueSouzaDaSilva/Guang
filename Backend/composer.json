@@ -1,0 +1,15 @@
+{
+    "name": "caue8/backend",
+    "autoload": {
+        "psr-4": {
+            "Caue8\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AlexandreCaueSouzadaSilva",
+            "email": "caue8766@gmail.com"
+        }
+    ],
+    "require": {}
+}
