@@ -1,0 +1,14 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "Iywv5QSgUOvYonX1gcucZ"
+uri = "file://guang-project.tar.gz"
+type = "unspecified"
+title = "Guang Project — Código completo"
+
+[[outputs]]
+id = "doyjddqPE_3rrwWCzSRzi"
+uri = "file://guang-source.tar.gz"
+type = "unspecified"
+title = "Guang Project — Código fonte (385 KB)"
