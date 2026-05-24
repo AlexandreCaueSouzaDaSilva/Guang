@@ -1,11 +1,8 @@
-[phases.setup]
-nixPkgs = ["nodejs_20"]
-
 [phases.install]
-cmds = ["npm install -g pnpm", "cd ../.. && pnpm install"]
+cmds = ["pnpm install --filter ./artifacts/api-server..."]
 
 [phases.build]
-cmds = ["pnpm run build"]
+cmds = ["pnpm --filter ./artifacts/api-server run build"]
 
 [start]
-cmd = "pnpm run start"
+cmd = "pnpm --filter ./artifacts/api-server run start"
