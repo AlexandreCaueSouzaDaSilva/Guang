@@ -1,6 +1,8 @@
 import { Router } from "express";
-import { openai } from "@workspace/integrations-openai-ai-server";
 import { requireAuth, type AuthRequest } from "../middlewares/auth.js";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 
 const router = Router();
 
@@ -39,55 +41,25 @@ router.post("/ocr/transcribe", requireAuth, async (req: AuthRequest, res) => {
       return;
     }
 
-    // Strip data URI prefix if present and get the URL
     const base64Data = imageBase64.includes(",")
-      ? imageBase64
-      : `data:image/jpeg;base64,${imageBase64}`;
+      ? imageBase64.split(",")[1]
+      : imageBase64;
 
-    let systemPrompt =
-      "You are an expert OCR system. Extract ALL visible text from the provided image exactly as it appears. Preserve line breaks, punctuation, and formatting as faithfully as possible. Return only the extracted text, nothing else.";
+    let prompt = "Extract ALL visible text from this image exactly as it appears. Return only the extracted text, nothing else.";
 
     if (targetLanguage) {
-      const langName =
-        SUPPORTED_LANGUAGES.find((l) => l.code === targetLanguage)?.name ??
-        targetLanguage;
-      systemPrompt =
-        `You are an expert OCR and translation system. First extract ALL visible text from the provided image exactly as it appears. ` +
-        `Then translate the extracted text to ${langName}. Return only the translated text, nothing else. Do not include the original text.`;
+      const langName = SUPPORTED_LANGUAGES.find((l) => l.code === targetLanguage)?.name ?? targetLanguage;
+      prompt = `Extract ALL visible text from this image and translate it to ${langName}. Return only the translated text, nothing else.`;
     }
 
-    const sourceHint = sourceLanguage
-      ? ` The source text is likely in ${SUPPORTED_LANGUAGES.find((l) => l.code === sourceLanguage)?.name ?? sourceLanguage}.`
-      : "";
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-5-mini",
-      max_completion_tokens: 4096,
-      messages: [
-        {
-          role: "system",
-          content: systemPrompt + sourceHint,
-        },
-        {
-          role: "user",
-          content: [
-            {
-              type: "image_url",
-              image_url: { url: base64Data },
-            },
-            {
-              type: "text",
-              text: targetLanguage
-                ? "Extract the text from this image and translate it."
-                : "Extract all text from this image.",
-            },
-          ],
-        },
-      ],
-    });
+    const result = await model.generateContent([
+      prompt,
+      { inlineData: { mimeType: "image/jpeg", data: base64Data } },
+    ]);
 
-    const transcribedText =
-      response.choices[0]?.message?.content?.trim() ?? "";
+    const transcribedText = result.response.text().trim();
 
     res.json({
       transcribedText,
