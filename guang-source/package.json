@@ -15,8 +15,11 @@
   "dependencies": {
     "@capacitor/android": "^8.3.4",
     "@capacitor/core": "^8.3.4",
+    "@google/generative-ai": "^0.24.1",
+    "@rollup/rollup-win32-x64-msvc": "^4.60.4",
     "adm-zip": "^0.5.17",
     "dotenv": "^17.4.2",
-    "drizzle-kit": "^0.31.10"
+    "drizzle-kit": "^0.31.10",
+    "lightningcss-win32-x64-msvc": "^1.32.0"
   }
 }

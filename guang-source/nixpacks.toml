@@ -8,4 +8,4 @@ cmds = ["corepack enable", "corepack prepare pnpm@latest --activate", "pnpm inst
 cmds = ["pnpm --filter ./artifacts/api-server run build"]
 
 [start]
-cmd = "pnpm --filter ./artifacts/api-server run start"
+cmd = "node --enable-source-maps ./artifacts/api-server/dist/index.mjs"
