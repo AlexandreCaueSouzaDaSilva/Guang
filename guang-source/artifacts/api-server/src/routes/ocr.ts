@@ -52,7 +52,7 @@ router.post("/ocr/transcribe", requireAuth, async (req: AuthRequest, res) => {
       prompt = `Extract ALL visible text from this image and translate it to ${langName}. Return only the translated text, nothing else.`;
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const result = await model.generateContent([
       prompt,
