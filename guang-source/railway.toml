@@ -1,3 +1,4 @@
+# rebuild cache v2
 [build]
 buildCommand = "pnpm install --no-frozen-lockfile && pnpm --filter ./artifacts/api-server run build"
 
