@@ -1,0 +1,6 @@
+# rebuild cache v2
+[build]
+buildCommand = "pnpm install --no-frozen-lockfile && pnpm --filter ./artifacts/api-server run build"
+
+[deploy]
+startCommand = "node --enable-source-maps ./artifacts/api-server/dist/index.mjs"

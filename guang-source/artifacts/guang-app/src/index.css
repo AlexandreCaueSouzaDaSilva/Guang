@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(body.dark *));
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-border: var(--border);
+  --color-card: var(--card-bg);
+  --color-card-foreground: var(--fg);
+  --color-primary: var(--primary);
+  --color-primary-foreground: #ffffff;
+  --color-muted: var(--surface);
+  --color-muted-foreground: var(--text-secondary);
+  --color-destructive: var(--primary);
+  --color-destructive-foreground: #ffffff;
+  --color-popover: var(--card-bg);
+  --color-popover-foreground: var(--fg);
+  --color-secondary: var(--surface);
+  --color-secondary-foreground: var(--fg);
+  --color-accent: var(--surface);
+  --color-accent-foreground: var(--fg);
+  --color-input: var(--border);
+  --color-ring: var(--primary);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}
+
+:root {
+  --primary: #E53935;
+  --surface: #F5F5F5;
+  --border: #E0E0E0;
+  --text-secondary: #888888;
+  --bg: #FAFAF8;
+  --fg: #1A1A1A;
+  --card-bg: #FFFFFF;
+  --toolbar-bg: #FFFFFF;
+  --icon-dark-bg: #E0E0E0;
+  --icon-dark-color: #534AB7;
+  --icon-notif-bg: #E0E0E0;
+  --icon-notif-color: #534AB7;
+  --radius: 0.75rem;
+}
+
+body.dark {
+  --bg: #1a0a0a;
+  --fg: #FFFFFF;
+  --card-bg: #1E1E1E;
+  --surface: #1E1E1E;
+  --border: #2C2C2C;
+  --text-secondary: #AAAAAA;
+  --icon-dark-bg: #26215C;
+  --icon-dark-color: #EEEDFE;
+  --icon-notif-bg: #26215C;
+  --icon-notif-color: #EEEDFE;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
